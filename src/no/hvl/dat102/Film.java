@@ -7,6 +7,7 @@ public class Film {
     private String tittel;
     private int lansering;
     private String filmselskap;
+    private Sjanger sjanger;
 
     public Film(){
         filmnr = 0;
@@ -64,6 +65,18 @@ public class Film {
 
     public void setFilmselskap(String filmselskap) {
         this.filmselskap = filmselskap;
+    }
+
+    public void setSjanger (Sjanger sjanger) {
+
+        this.sjanger = sjanger;
+
+    }
+
+    public Sjanger getSjanger () {
+
+        return sjanger;
+
     }
 
     public boolean equals(Film film) {

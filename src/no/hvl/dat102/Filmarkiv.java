@@ -35,7 +35,30 @@ public class Filmarkiv implements FilmarkivADT {
     @Override
     public void visFilm(int nr) {
 
+        Film film = null;
 
+        for (int i = 0; i < antall; i++) {
+
+            if (tabell[i].getFilmnr() == nr) {
+
+                film = tabell[i];
+
+            }
+        }
+
+        if (film == null) {
+
+            System.out.println("Filmen finnes ikke i arkivet.");
+
+        }
+
+        else {
+
+            System.out.println("Tittel: \t" + film.getTittel() + "\n" + "Produsent: \t" +
+                    film.getProdusent() + "\n" + "Filmselskap: \t" + film.getFilmselskap() +
+                    "Utgitt år: \t" + film.getLansering());
+
+        }
 
     }
 
@@ -56,7 +79,20 @@ public class Filmarkiv implements FilmarkivADT {
 
     @Override
     public int antall(Sjanger sjanger) {
-        return 0;
+
+        int sum = 0;
+
+        for (int i = 0; i < antall; i++) {
+
+            if (tabell[i].getSjanger() == sjanger) {
+
+                sum ++;
+
+            }
+        }
+
+        return sum;
+
     }
 
     @Override
@@ -65,15 +101,15 @@ public class Filmarkiv implements FilmarkivADT {
     }
 
 
-    private Film[] trimTab (Film[] tab, int n) {
+    private Film[] trimTab () {
         // n er antall elementer
 
-        Film[] nytab = new Film[n];
+        Film[] nytab = new Film[antall];
         int i = 0;
 
-        while (i < n) {
+        while (i < antall) {
 
-            nytab[i] = tab[i];
+            nytab[i] = tabell[i];
             i++;
 
         }
