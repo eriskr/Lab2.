@@ -7,7 +7,7 @@ public interface FilmarkivADT {
 
     /**
      * Viser en film, hvis filmen ikke fins, skrives en feilmelding
-     * @param nr Nummer paa film
+     * @param nr Nummer på film
      */
     void visFilm(int nr);
 

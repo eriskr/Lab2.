@@ -15,16 +15,16 @@ public class Film {
         tittel = "";
         lansering = 0;
         filmselskap = "";
-
+        sjanger = null;
     }
 
-    public Film(int filmnr, String produsent, String tittel, int lansering, String filmselskap){
+    public Film(int filmnr, String produsent, String tittel, int lansering, String filmselskap, Sjanger sjanger){
         this.filmnr = filmnr;
         this.produsent = produsent;
         this.tittel = tittel;
         this.lansering = lansering;
         this.filmselskap = filmselskap;
-
+        this.sjanger = sjanger;
     }
 
     public int getFilmnr() {
@@ -80,21 +80,9 @@ public class Film {
     }
 
     public boolean equals(Film film) {
-
-        // If the object is compared with itself then return true
-        if (film == this || filmnr == film.filmnr) {
-            return true;
-        }
-
-        /* Check if o is an instance of Complex or not
-          "null instanceof [type]" also returns false */
-        if (!(film instanceof Film)) {
-            return false;
-        }
-
-        return false;
-
+        return film == this || filmnr == film.filmnr;
     }
+
     @Override
     public int hashCode() {
         Integer temp = filmnr;

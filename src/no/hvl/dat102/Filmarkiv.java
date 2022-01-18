@@ -8,11 +8,9 @@ public class Filmarkiv implements FilmarkivADT {
     private int antall;
 
 
-    public Filmarkiv (int antall) {
-
+    public Filmarkiv (int size) {
         antall = 0;
-        tabell = new Film[antall];
-
+        tabell = new Film[size];
     }
 
     /**
@@ -64,17 +62,40 @@ public class Filmarkiv implements FilmarkivADT {
 
     @Override
     public void leggTilFilm(Film nyFilm) {
-
+        tabell[antall] = nyFilm;
+        antall++;
     }
 
     @Override
     public boolean slettFilm(int filmnr) {
+        for (int i = 0; i < antall; i++) {
+            if (tabell[i].getFilmnr() == filmnr) {
+                antall--;
+                tabell[i] = tabell[antall];
+                tabell[antall] = null;
+                return true;
+            }
+        }
         return false;
     }
 
     @Override
     public Film[] soekTittel(String delstreng) {
-        return new Film[0];
+
+        Film[] nyTab = new Film[antall];
+        int ant = 0;
+
+        for (int i = 0; i < antall; i++) {
+            if (tabell[i].getTittel().contains(delstreng)) {
+                nyTab[ant] = tabell[i];
+                ant++;
+            }
+        }
+        Film[] filmer = new Film[ant];
+        for (int i = 0; i < ant; i++) {
+            filmer[i] = nyTab[i];
+        }
+        return filmer;
     }
 
     @Override
@@ -84,7 +105,7 @@ public class Filmarkiv implements FilmarkivADT {
 
         for (int i = 0; i < antall; i++) {
 
-            if (tabell[i].getSjanger() == sjanger) {
+            if (tabell[i].getSjanger().equals(sjanger)) {
 
                 sum ++;
 
@@ -97,9 +118,8 @@ public class Filmarkiv implements FilmarkivADT {
 
     @Override
     public int antall() {
-        return 0;
+        return antall;
     }
-
 
     private Film[] trimTab () {
         // n er antall elementer
@@ -116,5 +136,9 @@ public class Filmarkiv implements FilmarkivADT {
 
         return nytab;
 
+    }
+
+    public Film[] getTabell() {
+        return tabell;
     }
 }
