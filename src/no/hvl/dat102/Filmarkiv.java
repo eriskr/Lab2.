@@ -55,8 +55,8 @@ public class Filmarkiv implements FilmarkivADT {
         else {
 
             System.out.println("Tittel: \t" + film.getTittel() + "\n" + "Produsent: \t" +
-                    film.getProdusent() + "\n" + "Filmselskap: \t" + film.getFilmselskap() +
-                    "Utgitt år: \t" + film.getLansering());
+                    film.getProdusent() + "\n" + "Filmselskap: \t" + film.getFilmselskap() + "\n" +
+                    "Utgitt år: \t" + film.getLansering() + "\n" + "Sjanger: " + film.getSjanger().toString() + "\n");
 
         }
 
