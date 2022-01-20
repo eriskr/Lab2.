@@ -1,0 +1,44 @@
+Oppgave 2a:
+i) O(n²)
+ii) O(n)
+iii) O(n³)
+iv) O(log2 n)
+
+Oppgave 2b:
+O(log2 n)
+
+Oppgave 2c:
+O(n(log2 n)) eller O(2n(log2 n)) hvis vi regner med multiplikasjon på siste linje
+
+Oppgave 2d:
+Areal: O(r²)
+Omkrets: O(r)
+
+Oppgave 2e:
+O( (n(n - 1))/2 )
+
+% MATLAB kode
+syms i j n
+
+Indre = symsum(1,j,i+1,n-1)
+Ytre = symsum(Indre,i,0,n-2)
+
+simplify(Ytre)
+% Slutt
+
+Oppgave 2f:
+i) O(n³)            4.
+ii) O(log2 n)       1.
+iii) O(n(log2 n))   3.
+iv) O(n)            2.
+
+Oppgave 2g:
+Hvorfor er vekstfunksjonen tid()-metoden T(n) = cn, der c er en konstant?
+
+Hvordan stemmer resultatene vekstfunksjonen? Diskuter.
+
+Kall disse:
+
+public static long currentTimeMillis()
+tid()
+public static long currentTimeMillis()
