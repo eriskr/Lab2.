@@ -6,10 +6,12 @@ import no.hvl.dat102.Sjanger;
 public interface FilmarkivADT {
 
     /**
-     * Viser en film, hvis filmen ikke fins, skrives en feilmelding
-     * @param nr Nummer på film
+     * Hente en film med gitt nr fra arkivet
+     * @param nr nummer på film som skal hentes.
+     * @return film med gitt nr. Om nr ikke finnes, returneres null.
      */
-    void visFilm(int nr);
+
+    Film finnFilm(int nr);
 
     /**
      * Legger til en ny film

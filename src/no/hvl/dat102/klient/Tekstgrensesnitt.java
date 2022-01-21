@@ -15,7 +15,7 @@ public class Tekstgrensesnitt {
     }
 
     // lese opplysningene om en FILM fra tastatur
-    public Film lesFilm(){
+    public Film lesFilm() { //TODO try-catch til parseInt og enum
 
         int nr = Integer.parseInt(JOptionPane.showInputDialog("Filmnummer: "));
         String prod = JOptionPane.showInputDialog("Produsent: ");

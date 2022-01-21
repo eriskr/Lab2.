@@ -31,7 +31,7 @@ public class Filmarkiv implements FilmarkivADT {
     }
 
     @Override
-    public void visFilm(int nr) {
+    public void visFilm(int nr) { //FIXME endret grensesnitt!
 
         Film film = null;
 
