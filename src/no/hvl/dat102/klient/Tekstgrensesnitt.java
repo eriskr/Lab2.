@@ -10,6 +10,9 @@ import java.util.Arrays;
 
 public class Tekstgrensesnitt {
 
+    private static final String ugyldig = "Ugyldig input!\n";
+    private static String mld = "";
+
     public Tekstgrensesnitt() {
 
     }
@@ -17,41 +20,14 @@ public class Tekstgrensesnitt {
     // lese opplysningene om en FILM fra tastatur
     public Film lesFilm() {
 
-        int nr = 0, lansering = 0;
-        String mld = "";
-        final String ugyldig = "Ugyldig input!\n";
-        Sjanger sjanger = null;
-
-        boolean ok;
-        do {
-            ok = true;
-            try {
-                nr = Integer.parseInt(JOptionPane.showInputDialog(mld + "Filmnummer: "));
-            }
-            catch (NumberFormatException e) {
-                ok = false;
-                mld = ugyldig;
-            }
-        } while (!ok);
-
-        mld = "";
+        int nr = userInput("Filmnummer: ");
         String prod = JOptionPane.showInputDialog("Produsent: ");
         String tittel = JOptionPane.showInputDialog("Filmtittel: ");
-
-        do {
-            ok = true;
-            try {
-                lansering = Integer.parseInt(JOptionPane.showInputDialog(mld + "Utgitt år: "));
-            }
-            catch (NumberFormatException e) {
-                ok = false;
-                mld = ugyldig;
-            }
-        } while (!ok);
-
-        mld = "";
+        int lansering = userInput("Utgitt år: ");
         String selskap = JOptionPane.showInputDialog(mld + "Filmselskap: ");
 
+        Sjanger sjanger = null;
+        boolean ok;
         do {
             ok = true;
             try {
@@ -64,6 +40,26 @@ public class Tekstgrensesnitt {
         } while (!ok);
 
       return new Film (nr, prod, tittel, lansering, selskap, sjanger);
+    }
+
+    private int userInput(String dialog) {
+
+        boolean ok;
+        int i = 0;
+
+        do {
+            ok = true;
+            try {
+                i = Integer.parseInt(JOptionPane.showInputDialog(mld + dialog));
+            }
+            catch (NumberFormatException e) {
+                ok = false;
+                mld = ugyldig;
+            }
+        } while (!ok);
+
+        mld = "";
+        return i;
     }
 
     // vise en film med alle opplysninger på skjerm (husk tekst for sjanger)
