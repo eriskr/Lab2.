@@ -17,47 +17,25 @@ public class Filmarkiv implements FilmarkivADT {
      * Øker tabellen med det dobbelte
      * @return Ny tabell
      */
-    private Film[] utvid() {
+    private void utvid() { //TODO Bruk i leggTilFilm() ?
 
-        Film[] nyTab = new Film[antall*2];
+        Film[] nyTab = new Film[antall * 2];
 
         for (int i = 0; i < antall; i++) {
-
             nyTab[i] = tabell[i];
-
         }
-
-        return nyTab;
+        tabell = nyTab;
     }
 
     @Override
-    public void visFilm(int nr) { //FIXME endret grensesnitt!
-
-        Film film = null;
+    public Film finnFilm(int nr) {
 
         for (int i = 0; i < antall; i++) {
-
             if (tabell[i].getFilmnr() == nr) {
-
-                film = tabell[i];
-
+                return tabell[i];
             }
         }
-
-        if (film == null) {
-
-            System.out.println("Filmen finnes ikke i arkivet.");
-
-        }
-
-        else {
-
-            System.out.println("Tittel: \t" + film.getTittel() + "\n" + "Produsent: \t" +
-                    film.getProdusent() + "\n" + "Filmselskap: \t" + film.getFilmselskap() + "\n" +
-                    "Utgitt år: \t" + film.getLansering() + "\n" + "Sjanger: " + film.getSjanger().toString() + "\n");
-
-        }
-
+        return null;
     }
 
     @Override

@@ -15,25 +15,60 @@ public class Tekstgrensesnitt {
     }
 
     // lese opplysningene om en FILM fra tastatur
-    public Film lesFilm() { //TODO try-catch til parseInt og enum
+    public Film lesFilm() {
 
-        int nr = Integer.parseInt(JOptionPane.showInputDialog("Filmnummer: "));
+        int nr = 0, lansering = 0;
+        String mld = "";
+        final String ugyldig = "Ugyldig input!\n";
+        Sjanger sjanger = null;
+
+        boolean ok;
+        do {
+            ok = true;
+            try {
+                nr = Integer.parseInt(JOptionPane.showInputDialog(mld + "Filmnummer: "));
+            }
+            catch (NumberFormatException e) {
+                ok = false;
+                mld = ugyldig;
+            }
+        } while (!ok);
+
+        mld = "";
         String prod = JOptionPane.showInputDialog("Produsent: ");
         String tittel = JOptionPane.showInputDialog("Filmtittel: ");
-        int lansering = Integer.parseInt(JOptionPane.showInputDialog("Utgitt år: "));
-        String selskap = JOptionPane.showInputDialog("Filmselskap: ");
-        Sjanger sjanger = Sjanger.valueOf(JOptionPane.showInputDialog("Sjanger: ").toUpperCase());
+
+        do {
+            ok = true;
+            try {
+                lansering = Integer.parseInt(JOptionPane.showInputDialog(mld + "Utgitt år: "));
+            }
+            catch (NumberFormatException e) {
+                ok = false;
+                mld = ugyldig;
+            }
+        } while (!ok);
+
+        mld = "";
+        String selskap = JOptionPane.showInputDialog(mld + "Filmselskap: ");
+
+        do {
+            ok = true;
+            try {
+                sjanger = Sjanger.valueOf(JOptionPane.showInputDialog(mld + "Sjanger: ").toUpperCase());
+            }
+            catch (IllegalArgumentException e) {
+                ok = false;
+                mld = ugyldig;
+            }
+        } while (!ok);
 
       return new Film (nr, prod, tittel, lansering, selskap, sjanger);
     }
 
     // vise en film med alle opplysninger på skjerm (husk tekst for sjanger)
     public void visFilm(Film film) {
-
-        System.out.println("Tittel: \t" + film.getTittel() + "\n" + "Produsent: \t" +
-                film.getProdusent() + "\n" + "Filmselskap: \t" + film.getFilmselskap() + "\n" +
-                "Utgitt år: \t" + film.getLansering() + "Sjanger: " + film.getSjanger().toString() + "\n");
-
+        System.out.println(film);
     }
 
     // Skrive ut alle Filmer med en spesiell delstreng i tittelen

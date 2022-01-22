@@ -10,7 +10,7 @@ public class KlientFilmarkiv {
         meny.start();
 
         for (int i = 0; i < arkiv.antall(); i++) {
-            arkiv.visFilm(arkiv.getTabell()[i].getFilmnr());
+            System.out.println(arkiv.finnFilm(arkiv.getTabell()[i].getFilmnr()));
         }
     }
 

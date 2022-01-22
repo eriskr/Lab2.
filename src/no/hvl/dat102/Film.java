@@ -27,6 +27,13 @@ public class Film {
         this.sjanger = sjanger;
     }
 
+    @Override
+    public String toString() {
+        return "Tittel: \t" + tittel + "\n" + "Produsent: \t" +
+                produsent + "\n" + "Filmselskap: \t" + filmselskap + "\n" +
+                "Utgitt år: \t" + lansering + "Sjanger: " + sjanger.toString() + "\n";
+    }
+
     public int getFilmnr() {
         return filmnr;
     }
