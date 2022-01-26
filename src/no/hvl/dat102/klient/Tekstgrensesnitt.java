@@ -82,6 +82,7 @@ public class Tekstgrensesnitt {
         }
     }
 
+    // O-notasjon
     // Skrive ut en enkel statistikk som inneholder antall Filmer totalt
     // og hvor mange det er i hver sjanger
     public void skrivUtStatistikk(FilmarkivADT filma) {
