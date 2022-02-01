@@ -59,6 +59,7 @@ public class Filmarkiv2 implements FilmarkivADT {
         return false;
     }
 
+    //Kan brukes til å finne node
     private LinearNode<Film> finnNode(Film film) {
 
         LinearNode<Film> node = start;
@@ -79,7 +80,7 @@ public class Filmarkiv2 implements FilmarkivADT {
         Film[] tab = new Film[antall];
 
         for (int i = 0; i < antall; i++) {
-            if (node.getElement().getTittel().equals(delstreng) ){
+            if (node.getElement().getTittel().contains(delstreng) ){
                 tab[teller] = node.getElement();
                 teller++;
             }
@@ -95,7 +96,8 @@ public class Filmarkiv2 implements FilmarkivADT {
         LinearNode<Film> node = start;
 
         while (node != null) {
-            if (node.getElement().getSjanger().equals(sjanger)) {
+            Film f = node.getElement();
+            if (f != null && f.getSjanger() != null && node.getElement().getSjanger().equals(sjanger)) {
                 ant++;
             }
             node = node.getNeste();

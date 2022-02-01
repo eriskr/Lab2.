@@ -69,11 +69,18 @@ public class Tekstgrensesnitt {
 
     // Skrive ut alle Filmer med en spesiell delstreng i tittelen
     public void skrivUtFilmDelstrengITittel(FilmarkivADT filma, String delstreng) {
-        System.out.println(Arrays.toString(filma.soekTittel(delstreng)));
+
+        Film[] tab = filma.soekTittel(delstreng);
+
+        for (Film f : tab) {
+
+            System.out.println(f.toString());
+
+        }
     }
 
     // Skriver ut alle Filmer av en produsent / en gruppe
-    public void skrivUtFilmProdusent(Filmarkiv filma, String delstreng) {
+    public void skrivUtFilmProdusent(FilmarkivADT filma, String delstreng) {
 
         for (int i = 0; i < filma.antall(); i++) {
             if (filma.getTabell()[i].getProdusent().contains(delstreng)) {
@@ -101,7 +108,7 @@ public class Tekstgrensesnitt {
 
         System.out.println("Action: \t" + action + "\n" + "Drama: \t" + drama + "\n" +
                 "Fantasy: \t" + fantasy + "\n" + "Historie: \t" + historie + "\n" +
-                "Komedie: \t" + komedie + "\n" + "Science Fiction: \t" + scifi);
+                "Komedie: \t" + komedie + "\n" + "Science Fiction: \t" + scifi + "\n");
 
     }
 }

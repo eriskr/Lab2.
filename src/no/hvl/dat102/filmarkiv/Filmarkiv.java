@@ -7,7 +7,6 @@ public class Filmarkiv implements FilmarkivADT {
     private Film[] tabell;
     private int antall;
 
-
     public Filmarkiv (int size) {
         antall = 0;
         tabell = new Film[size];
@@ -17,7 +16,7 @@ public class Filmarkiv implements FilmarkivADT {
      * Øker tabellen med det dobbelte
      * @return Ny tabell
      */
-    private void utvid() { //TODO Bruk i leggTilFilm() ?
+    private void utvid() {
 
         Film[] nyTab = new Film[antall * 2];
 
@@ -40,6 +39,9 @@ public class Filmarkiv implements FilmarkivADT {
 
     @Override
     public void leggTilFilm(Film nyFilm) {
+        if (antall == tabell.length) {
+            utvid();
+        }
         tabell[antall] = nyFilm;
         antall++;
     }
@@ -82,8 +84,8 @@ public class Filmarkiv implements FilmarkivADT {
         int sum = 0;
 
         for (int i = 0; i < antall; i++) {
-
-            if (tabell[i].getSjanger().equals(sjanger)) {
+            Sjanger s = tabell[i].getSjanger();
+            if (s != null && s.equals(sjanger)) {
 
                 sum ++;
 

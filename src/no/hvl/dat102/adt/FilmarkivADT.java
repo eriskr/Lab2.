@@ -46,4 +46,8 @@ public interface FilmarkivADT {
      */
     int antall();
 
+    default Film[] getTabell() {
+        throw new UnsupportedOperationException();
+    }
+
 }

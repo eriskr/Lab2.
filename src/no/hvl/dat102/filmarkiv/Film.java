@@ -31,7 +31,7 @@ public class Film {
     public String toString() {
         return "Tittel: \t" + tittel + "\n" + "Produsent: \t" +
                 produsent + "\n" + "Filmselskap: \t" + filmselskap + "\n" +
-                "Utgitt år: \t" + lansering + "Sjanger: " + sjanger.toString() + "\n";
+                "Utgitt år: \t" + lansering + "\n" + "Sjanger: \t" + sjanger.toString() + "\n";
     }
 
     public int getFilmnr() {

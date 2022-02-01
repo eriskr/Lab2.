@@ -20,6 +20,22 @@ public class Meny {
         filmarkiv.leggTilFilm(new Film(2,"Produsent2","Action film",1999,"Filmselskap1",Sjanger.ACTION));
         filmarkiv.leggTilFilm(new Film(3,"Produsent3","Ringenes mester",2013,"Filmselskap3",Sjanger.FANTASY));
         filmarkiv.leggTilFilm(tekstgr.lesFilm());
+
+        System.out.println("Skriv ut filmer av en produsent:");
+        System.out.println("====================================");
+        tekstgr.skrivUtFilmProdusent(filmarkiv, "sent1");
+
+        System.out.println();
+
+        System.out.println("Skriv ut film med delstreng  i tittel:");
+        System.out.println("====================================");
+        tekstgr.skrivUtFilmDelstrengITittel(filmarkiv, "film");
+
+        System.out.println();
+
+        System.out.println("Statistikk");
+        System.out.println("====================================");
+        tekstgr.skrivUtStatistikk(filmarkiv);
     }
 
 

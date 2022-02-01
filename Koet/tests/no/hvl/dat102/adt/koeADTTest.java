@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 public abstract class koeADTTest {
 
     protected Integer i0, i1, i2, i3, i4;
-    protected KjedetKoe<Integer> koe;
+    protected KoeADT<Integer> koe;
 
     protected abstract KoeADT<Integer> reset();
 
