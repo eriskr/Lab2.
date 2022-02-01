@@ -1,9 +1,8 @@
-package no.hvl.dat102.klienter;
+package no.hvl.dat102.koet.klienter;
 
 import no.hvl.dat102.adt.KoeADT;
-import no.hvl.dat102.exceptions.EmptyCollectionException;
-import no.hvl.dat102.kjedet.KjedetKoe;
-import no.hvl.dat102.tabell.TabellSirkulaerKoe;
+import no.hvl.dat102.exception.EmptyCollectionException;
+import no.hvl.dat102.koet.tabell.TabellSirkulaerKoe;
 
 public class KlientKoe {
 
@@ -16,7 +15,7 @@ public class KlientKoe {
 		for (int i = 0; i < lengde; i++) {
 			tegnKoe.innKoe(streng.charAt(i));
 		}
-		//System.out.println(tegnKoe); // kall på toString()
+		//System.out.println(tegnKoe); // kall pï¿½ toString()
 		try {
 			while (!tegnKoe.erTom()) {
 				char tegn = tegnKoe.utKoe();

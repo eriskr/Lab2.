@@ -1,4 +1,4 @@
-package no.hvl.dat102.kjedet;
+package no.hvl.dat102.koet.kjedet;
 
 //  Representerer en node.
 //************************************************************
@@ -22,7 +22,7 @@ public class LinearNode<T>{
     element = elem;
   }
  /**********************************************************
-    Returnerer etterfølger.
+    Returnerer etterfï¿½lger.
   **********************************************************/
   public LinearNode<T> getNeste(){
     return neste;

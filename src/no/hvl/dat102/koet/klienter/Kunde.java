@@ -1,4 +1,4 @@
-package no.hvl.dat102.klienter;
+package no.hvl.dat102.koet.klienter;
 
 public class Kunde {
 

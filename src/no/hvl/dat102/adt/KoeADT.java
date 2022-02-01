@@ -1,6 +1,6 @@
 package no.hvl.dat102.adt;
 
-import no.hvl.dat102.exceptions.EmptyCollectionException;
+import no.hvl.dat102.exception.EmptyCollectionException;
 
 public interface KoeADT<T> {
 

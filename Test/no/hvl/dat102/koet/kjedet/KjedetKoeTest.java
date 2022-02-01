@@ -1,7 +1,7 @@
-package no.hvl.dat102.kjedet;
+package no.hvl.dat102.koet.kjedet;
 
 import no.hvl.dat102.adt.KoeADT;
-import no.hvl.dat102.adt.koeADTTest;
+import no.hvl.dat102.koet.adt.koeADTTest;
 
 public class KjedetKoeTest extends koeADTTest {
 

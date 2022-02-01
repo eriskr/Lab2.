@@ -1,8 +1,7 @@
-package no.hvl.dat102.klienter;
+package no.hvl.dat102.koet.klienter;
 
 import no.hvl.dat102.adt.KoeADT;
-import no.hvl.dat102.kjedet.KjedetKoe;
-import no.hvl.dat102.tabell.TabellSirkulaerKoe;
+import no.hvl.dat102.koet.tabell.TabellSirkulaerKoe;
 
 public class KlientKoding {
 	// eks listing 5.1 i boken,

@@ -1,7 +1,8 @@
-package no.hvl.dat102.adt;
+package no.hvl.dat102.koet.adt;
 
-import no.hvl.dat102.exceptions.EmptyCollectionException;
-import no.hvl.dat102.kjedet.KjedetKoe;
+import no.hvl.dat102.adt.KoeADT;
+import no.hvl.dat102.exception.EmptyCollectionException;
+import no.hvl.dat102.koet.kjedet.KjedetKoe;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
