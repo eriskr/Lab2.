@@ -1,9 +1,9 @@
-package no.hvl.dat102.klient;
+package no.hvl.dat102.filmarkiv.klient;
 
-import no.hvl.dat102.Film;
-import no.hvl.dat102.Sjanger;
+import no.hvl.dat102.filmarkiv.Film;
+import no.hvl.dat102.filmarkiv.Sjanger;
 import no.hvl.dat102.adt.FilmarkivADT;
-import no.hvl.dat102.Filmarkiv;
+import no.hvl.dat102.filmarkiv.Filmarkiv;
 
 import javax.swing.*;
 import java.util.Arrays;
