@@ -1,4 +1,4 @@
-package no.hvl.dat102.kjedet;
+package no.hvl.dat102.filmarkiv.kjedet;
 
 /**
  * Representerer en node.

@@ -1,7 +1,7 @@
-package no.hvl.dat102.kjedet;
+package no.hvl.dat102.filmarkiv.kjedet;
 
-import no.hvl.dat102.Film;
-import no.hvl.dat102.Sjanger;
+import no.hvl.dat102.filmarkiv.Film;
+import no.hvl.dat102.filmarkiv.Sjanger;
 import no.hvl.dat102.adt.FilmarkivADT;
 
 public class Filmarkiv2 implements FilmarkivADT {

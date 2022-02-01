@@ -1,6 +1,6 @@
-package no.hvl.dat102.klient;
+package no.hvl.dat102.filmarkiv.klient;
 
-import no.hvl.dat102.Filmarkiv;
+import no.hvl.dat102.filmarkiv.Filmarkiv;
 
 public class KlientFilmarkiv {
     public static void main(String[] args) {

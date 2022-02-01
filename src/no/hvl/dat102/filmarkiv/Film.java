@@ -1,4 +1,4 @@
-package no.hvl.dat102;
+package no.hvl.dat102.filmarkiv;
 
 public class Film {
 
