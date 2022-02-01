@@ -12,6 +12,9 @@ public class KlientFilmarkiv {
         for (int i = 0; i < arkiv.antall(); i++) {
             System.out.println(arkiv.finnFilm(arkiv.getTabell()[i].getFilmnr()));
         }
+
+        System.out.println();
+
     }
 
 }
