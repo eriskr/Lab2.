@@ -17,14 +17,6 @@ Omkrets: O(r)
 Oppgave 2e:
 O( (n(n - 1))/2 )
 
-% MATLAB kode
-syms i j n
-
-Indre = symsum(1,j,i+1,n-1)
-Ytre = symsum(Indre,i,0,n-2)
-
-simplify(Ytre)
-% Slutt
 
 Oppgave 2f:
 i) O(n³)            4.
@@ -34,8 +26,11 @@ iv) O(n)            2.
 
 Oppgave 2g:
 Hvorfor er vekstfunksjonen tid()-metoden T(n) = cn, der c er en konstant?
+- c er antall operasjoner for hver gang vi kjører n, derfor blir funksjonen cn.
+    I tid()-metoden vil c være 1 da vi har 1 operasjon per kjøring.
 
-Hvordan stemmer resultatene vekstfunksjonen? Diskuter.
+Hvordan stemmer resultatene med vekstfunksjonen? Diskuter.
+-
 
 Kall disse:
 
