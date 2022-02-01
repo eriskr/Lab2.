@@ -17,7 +17,6 @@ Omkrets: O(r)
 Oppgave 2e:
 O( (n(n - 1))/2 )
 
-
 Oppgave 2f:
 i) O(n³)            4.
 ii) O(log2 n)       1.
@@ -30,10 +29,8 @@ Hvorfor er vekstfunksjonen tid()-metoden T(n) = cn, der c er en konstant?
     I tid()-metoden vil c være 1 da vi har 1 operasjon per kjøring.
 
 Hvordan stemmer resultatene med vekstfunksjonen? Diskuter.
--
+- Siden vi har en løkke som vil kjøre n antall ganger er O-notasjonen O(n)
+    Vi har 1 addisjon for hver iterasjon, så da er konstanten 1, cn blir da n
 
-Kall disse:
-
-public static long currentTimeMillis()
-tid()
-public static long currentTimeMillis()
+- Hvis vi ønsker å kjøre x antall ganger blir regnestykket xcn, hvis vi ser bort fra sammenligning
+    Så jo flere ganger vi kjører metoden så øker n
